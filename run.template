@@ -1,0 +1,3 @@
+export IP=$(curl http://ipecho.net/plain)
+export BOOT_NODE=<BOOT_NODE>
+docker-compose up -d
