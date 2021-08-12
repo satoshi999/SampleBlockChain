@@ -105,8 +105,8 @@ class BlockChain {
     console.log(`added mining transaction pool:${JSON.stringify(this.transactionPool)}`);
     const {nonce, previousHash} = this.proofOfWork();
     console.log(`success proofOfWork. nonce:${nonce}, previousHash: ${previousHash}`);
-    this.createBlock(nonce, previousHash);
-    console.log(`success create block. chain:${JSON.stringify(this.chain)}`);
+    const block = this.createBlock(nonce, previousHash);
+    console.log(`success create block. ${JSON.stringify(block)}`);
     if(this.validChain()) {
       console.log(`success valid chain. My wallet token:${JSON.stringify(this.wallets[this.address])}`);
     } else {
